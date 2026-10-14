@@ -1,0 +1,7 @@
+# Ignorar pastas de compilação do Code::Blocks
+bin/
+obj/
+
+# Ignorar ficheiros de configuração de utilizador
+*.layout
+*.depend
