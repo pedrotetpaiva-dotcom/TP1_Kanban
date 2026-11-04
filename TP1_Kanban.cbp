@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,44 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ctrl_apresentacao.h" />
+		<Unit filename="include/ctrl_apresentacao_cartao.h" />
+		<Unit filename="include/ctrl_apresentacao_principal.h" />
+		<Unit filename="include/ctrl_apresentacao_projeto.h" />
+		<Unit filename="include/ctrl_apresentacao_quadro.h" />
+		<Unit filename="include/email.h" />
+		<Unit filename="include/estado.h" />
+		<Unit filename="include/identificador.h" />
+		<Unit filename="include/iservico_autenticacao.h" />
+		<Unit filename="include/iservico_cartao.h" />
+		<Unit filename="include/iservico_pessoa.h" />
+		<Unit filename="include/iservico_projeto.h" />
+		<Unit filename="include/iservico_quadro.h" />
+		<Unit filename="include/limite.h" />
+		<Unit filename="include/nome.h" />
+		<Unit filename="include/papel.h" />
+		<Unit filename="include/prioridade.h" />
+		<Unit filename="include/senha.h" />
+		<Unit filename="include/tamanho.h" />
+		<Unit filename="include/texto.h" />
+		<Unit filename="include/timestamp.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ctrl_apresentacao.cpp" />
+		<Unit filename="src/ctrl_apresentacao_cartao.cpp" />
+		<Unit filename="src/ctrl_apresentacao_principal.cpp" />
+		<Unit filename="src/ctrl_apresentacao_projeto.cpp" />
+		<Unit filename="src/ctrl_apresentacao_quadro.cpp" />
+		<Unit filename="src/email.cpp" />
+		<Unit filename="src/estado.cpp" />
+		<Unit filename="src/identificador.cpp" />
+		<Unit filename="src/limite.cpp" />
+		<Unit filename="src/nome.cpp" />
+		<Unit filename="src/papel.cpp" />
+		<Unit filename="src/prioridade.cpp" />
+		<Unit filename="src/senha.cpp" />
+		<Unit filename="src/tamanho.cpp" />
+		<Unit filename="src/texto.cpp" />
+		<Unit filename="src/timestamp.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

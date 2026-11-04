@@ -1,21 +1,19 @@
 #include <iostream>
 #include "ctrl_apresentacao.h"
-#include "ctrl_apresentacao_projeto.h"
+#include "ctrl_apresentacao_principal.h"
 
 using namespace std;
 
 int main() {
-    // 1. Instancia as suas Controladoras de Apresentação
     CtrlApresentacaoAutenticacao ctrlLogin;
-    CtrlApresentacaoProjeto ctrlProjeto;
+    CtrlApresentacaoPrincipal ctrlPrincipal;
 
-    // Como o Lucas ainda não fez o serviço, enviamos nullptr (nulo)
+    // Simula a falta do banco de dados do Lucas por enquanto
     ctrlLogin.setServicoAutenticacao(nullptr);
 
-    // 2. Executa o fluxo
+    // Executa o fluxo: Se passar no login, abre o menu principal
     if (ctrlLogin.executarLogin()) {
-        // Se o login devolver true, abre o menu de projetos
-        ctrlProjeto.executarMenu();
+        ctrlPrincipal.executarMenu();
     } else {
         cout << "Sistema encerrado por falha na autenticacao." << endl;
     }
