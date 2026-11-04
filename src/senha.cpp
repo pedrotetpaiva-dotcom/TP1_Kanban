@@ -4,9 +4,9 @@
 
 // 1. A LÓGICA DE VALIDAÇÃO (A Cozinha)
 void Senha::validar(std::string valor) {
-    // Regra 1: Deve ter 6 caracteres
-    if (valor.length() != 6) {
-        throw std::invalid_argument("Erro: A senha deve ter exatamente 6 caracteres.");
+    // Regra 1: Deve ter 5 caracteres
+    if (valor.length() != 5) {
+        throw std::invalid_argument("Erro: A senha deve ter exatamente 5 caracteres.");
     }
 
     bool temLetra = false;
