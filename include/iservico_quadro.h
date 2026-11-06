@@ -69,7 +69,6 @@ class IServicoQuadro {
         virtual bool listar(const Email& solicitante, const Identificador& projeto,
                             std::list<Identificador>* quadros) = 0;
 
-        // Destrutor virtual (obrigatório em classes abstratas C++)
         virtual ~IServicoQuadro() {}
 };
 
