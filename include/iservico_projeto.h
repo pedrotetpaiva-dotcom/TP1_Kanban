@@ -64,7 +64,6 @@ class IServicoProjeto {
          */
         virtual bool listar(const Email& solicitante, std::list<Identificador>* projetos) = 0;
 
-        // Destrutor virtual (obrigatório em classes abstratas C++)
         virtual ~IServicoProjeto() {}
 };
 
