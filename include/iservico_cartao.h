@@ -16,20 +16,13 @@ class CartaoAtividade;
 /**
  * @brief Serviços sobre a entidade Cartão de atividade.
  *
- * Um cartão pertence a exatamente um quadro e tem exatamente um
- * desenvolvedor. Criar, atualizar e excluir são permitidos somente ao GESTOR
- * do projeto; os demais serviços, a GESTOR e DESENVOLVEDOR.
  *
- * Os tempos são devolvidos em minutos, pois Timestamp tem precisão de
- * minutos.
  */
 class IServicoCartao {
     public:
         /**
          * @brief Cria um cartão em um quadro.
          *
-         * O cartão nasce na coluna A FAZER e o serviço registra o instante de
-         * entrada.
          * @param solicitante E-mail do usuário autenticado (gestor do projeto).
          * @param quadro Identificador do quadro que receberá o cartão.
          * @param desenvolvedor E-mail da pessoa responsável pelo cartão.
@@ -149,7 +142,6 @@ class IServicoCartao {
         virtual bool lerWIP(const Email& solicitante, const Identificador& quadro,
                             int* wip) = 0;
 
-        // Destrutor virtual (obrigatório em classes abstratas C++)
         virtual ~IServicoCartao() {}
 };
 
