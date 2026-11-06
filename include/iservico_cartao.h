@@ -15,8 +15,6 @@ class CartaoAtividade;
 
 /**
  * @brief Serviços sobre a entidade Cartão de atividade.
- *
- *
  */
 class IServicoCartao {
     public:
