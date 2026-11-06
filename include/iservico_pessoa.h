@@ -10,28 +10,18 @@ class Pessoa;
  * @file iservico_pessoa.h
  * @brief Interface dos serviços sobre a entidade Pessoa (serviços 1 a 5).
  *
- * Convenções (valem para todas as interfaces IServicoXxx):
- * - O retorno @c bool indica sucesso. Em caso de @c false nada é alterado no
- *   sistema e os parâmetros de saída não devem ser usados.
- * - Parâmetros de saída são ponteiros; parâmetros de entrada são referências
- *   constantes.
- * - O parâmetro @c solicitante é o e-mail do usuário já autenticado; a camada
- *   de serviço o usa para verificar se o papel (GESTOR ou DESENVOLVEDOR) dá
- *   direito ao serviço.
- * - Listagens devolvem apenas os identificadores das entidades.
+ *
  */
 
 /**
  * @brief Serviços sobre a entidade Pessoa.
  *
- * Todos os serviços são permitidos aos papéis GESTOR e DESENVOLVEDOR.
  */
 class IServicoPessoa {
     public:
         /**
          * @brief Cria uma pessoa (cria uma conta).
          *
-         * Não exige autenticação.
          * @param pessoa Dados da nova pessoa.
          * @return @c false se já existe pessoa com o mesmo e-mail.
          */
@@ -70,7 +60,6 @@ class IServicoPessoa {
          */
         virtual bool listar(std::list<Email>* emails) = 0;
 
-        // Destrutor virtual (obrigatório em classes abstratas C++)
         virtual ~IServicoPessoa() {}
 };
 
