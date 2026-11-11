@@ -6,11 +6,26 @@
 
 using namespace std;
 
+// Metodos para receber as interfaces de servico do main
+void CtrlApresentacaoPrincipal::setServicoProjeto(IServicoProjeto* servico) {
+    this->servicoProjeto = servico;
+}
+
+void CtrlApresentacaoPrincipal::setServicoQuadro(IServicoQuadro* servico) {
+    this->servicoQuadro = servico;
+}
+
 void CtrlApresentacaoPrincipal::executarMenu() {
     int opcao = -1;
     CtrlApresentacaoProjeto ctrlProjeto;
     CtrlApresentacaoQuadro ctrlQuadro;
     CtrlApresentacaoCartao ctrlCartao;
+
+    // Repassa os servicos recebidos para as controladoras especificas
+    ctrlProjeto.setServicoProjeto(this->servicoProjeto);
+
+    // Nota: Quando criarmos o metodo setServicoQuadro na classe ctrl_apresentacao_quadro, descomentaremos a linha abaixo:
+    // ctrlQuadro.setServicoQuadro(this->servicoQuadro);
 
     while (opcao != 0) {
         cout << "\n=======================================" << endl;

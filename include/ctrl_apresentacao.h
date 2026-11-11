@@ -3,18 +3,21 @@
 
 #include "email.h"
 #include "senha.h"
-#include "iservico_autenticacao.h" // A interface que liga a sua camada à do Lucas
+#include "iservico_autenticacao.h"
+#include "iservico_pessoa.h" // Inclui a interface do servico de pessoa
 
 class CtrlApresentacaoAutenticacao {
     private:
-        // O ponteiro para a interface declarada (Exigência do PDF)
-        IServicoAutenticacao* servico;
+        // Ponteiros para as interfaces da Camada de Servico
+        IServicoAutenticacao* servicoAutenticacao;
+        IServicoPessoa* servicoPessoa;
 
     public:
-        // Método para instanciar o serviço
+        // Metodos para injetar as dependencias (conectar as camadas)
         void setServicoAutenticacao(IServicoAutenticacao* servico);
+        void setServicoPessoa(IServicoPessoa* servico);
 
-        // O método de login agora devolve true (sucesso) ou false (falha)
+        // O metodo principal de acesso (agora engloba menu de login e cadastro)
         bool executarLogin();
 };
 

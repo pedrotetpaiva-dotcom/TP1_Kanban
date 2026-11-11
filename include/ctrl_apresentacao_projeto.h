@@ -1,9 +1,13 @@
 #ifndef CTRL_APRESENTACAO_PROJETO_H
 #define CTRL_APRESENTACAO_PROJETO_H
 
+#include "iservico_projeto.h"
+
 class CtrlApresentacaoProjeto {
+    private:
+        IServicoProjeto* servicoProjeto;
     public:
-        // Exibe as opções: 1-Criar, 2-Ler, 3-Atualizar, 4-Excluir, 5-Listar, 0-Voltar
+        void setServicoProjeto(IServicoProjeto* servico);
         void executarMenu();
 };
 

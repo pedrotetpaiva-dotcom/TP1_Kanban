@@ -3,6 +3,11 @@
 
 using namespace std;
 
+// Inicia o ponteiro conectando a interface de projeto
+void CtrlApresentacaoProjeto::setServicoProjeto(IServicoProjeto* servico) {
+    this->servicoProjeto = servico;
+}
+
 void CtrlApresentacaoProjeto::executarMenu() {
     int opcao = -1;
 
@@ -22,7 +27,7 @@ void CtrlApresentacaoProjeto::executarMenu() {
         switch (opcao) {
             case 1:
                 cout << "\n[Apresentacao] Tela de Criar Projeto..." << endl;
-                // Aqui você vai pedir os dados (Identificador, Nome, Texto, etc.)
+                // Aqui voce vai pedir os dados (Identificador, Nome, Texto, etc.)
                 break;
             case 2:
                 cout << "\n[Apresentacao] Tela de Ler Projeto..." << endl;
