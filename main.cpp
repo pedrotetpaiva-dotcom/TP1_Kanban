@@ -1,17 +1,19 @@
 #include <iostream>
 #include "ctrl_apresentacao.h"
 #include "ctrl_apresentacao_principal.h"
+#include "servico_autenticacao.h" // Adicione esta linha
 
 using namespace std;
 
 int main() {
     CtrlApresentacaoAutenticacao ctrlLogin;
     CtrlApresentacaoPrincipal ctrlPrincipal;
+    ServicoAutenticacao servicoAuth; // Instancia o servico real que voce acabou de criar
 
-    // Simula a falta do banco de dados do Lucas por enquanto
-    ctrlLogin.setServicoAutenticacao(nullptr);
+    // Injeta o servico real na apresentacao (adeus nullptr)
+    ctrlLogin.setServicoAutenticacao(&servicoAuth);
 
-    // Executa o fluxo: Se passar no login, abre o menu principal
+    // Executa o fluxo
     if (ctrlLogin.executarLogin()) {
         ctrlPrincipal.executarMenu();
     } else {
