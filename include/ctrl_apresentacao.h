@@ -4,20 +4,42 @@
 #include "email.h"
 #include "senha.h"
 #include "iservico_autenticacao.h"
-#include "iservico_pessoa.h" // Inclui a interface do servico de pessoa
+#include "iservico_pessoa.h"
 
+/**
+ * @file ctrl_apresentacao.h
+ * @brief Declaração da controladora de apresentação de acesso (login e cadastro).
+ */
+
+/**
+ * @brief Controladora de apresentação da tela de acesso.
+ *
+ * Mostra o menu inicial, lê e valida e-mail e senha digitados e chama os
+ * serviços de autenticação e de pessoa por meio das interfaces, sem conhecer
+ * a implementação da camada de serviço.
+ */
 class CtrlApresentacaoAutenticacao {
     private:
-        // Ponteiros para as interfaces da Camada de Servico
-        IServicoAutenticacao* servicoAutenticacao;
-        IServicoPessoa* servicoPessoa;
+        IServicoAutenticacao* servicoAutenticacao;  ///< Serviço de autenticação.
+        IServicoPessoa* servicoPessoa;              ///< Serviço de pessoa, usado no cadastro.
 
     public:
-        // Metodos para injetar as dependencias (conectar as camadas)
+        /**
+         * @brief Liga a controladora ao serviço de autenticação.
+         * @param servico Implementação de IServicoAutenticacao.
+         */
         void setServicoAutenticacao(IServicoAutenticacao* servico);
+
+        /**
+         * @brief Liga a controladora ao serviço de pessoa.
+         * @param servico Implementação de IServicoPessoa.
+         */
         void setServicoPessoa(IServicoPessoa* servico);
 
-        // O metodo principal de acesso (agora engloba menu de login e cadastro)
+        /**
+         * @brief Executa o menu de acesso (login e cadastro de conta).
+         * @return @c true se o usuário se autenticou; @c false se saiu sem entrar.
+         */
         bool executarLogin();
 };
 
