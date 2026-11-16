@@ -33,9 +33,9 @@ bool CtrlApresentacaoAutenticacao::executarLogin() {
     int opcao = -1;
 
     while (opcao != 0) {
-        cout << "\n=======================================" << endl;
-        cout << "       SISTEMA KANBAN - ACESSO         " << endl;
-        cout << "=======================================" << endl;
+        cout << "\n=========================================" << endl;
+        cout << "       SISTEMA KANBAN 1.0 - ACESSO         " << endl;
+        cout << "=========================================" << endl;
         cout << "1 - Fazer Login" << endl;
         cout << "2 - Cadastrar nova conta" << endl;
         cout << "0 - Sair do Sistema" << endl;
