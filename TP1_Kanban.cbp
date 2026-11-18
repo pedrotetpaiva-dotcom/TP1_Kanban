@@ -37,7 +37,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="teste" />
+					<Add directory="include/testes" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -115,22 +115,22 @@
 		<Unit filename="src/tamanho.cpp" />
 		<Unit filename="src/texto.cpp" />
 		<Unit filename="src/timestamp.cpp" />
-		<Unit filename="teste/main_testes.cpp">
+		<Unit filename="src/testes/main_testes.cpp">
 			<Option target="Testes" />
 		</Unit>
-		<Unit filename="teste/teste.h">
+		<Unit filename="include/testes/teste.h">
 			<Option target="Testes" />
 		</Unit>
-		<Unit filename="teste/teste_apresentacao.cpp">
+		<Unit filename="src/testes/teste_apresentacao.cpp">
 			<Option target="Testes" />
 		</Unit>
-		<Unit filename="teste/teste_dominios.cpp">
+		<Unit filename="src/testes/teste_dominios.cpp">
 			<Option target="Testes" />
 		</Unit>
-		<Unit filename="teste/teste_entidades.cpp">
+		<Unit filename="src/testes/teste_entidades.cpp">
 			<Option target="Testes" />
 		</Unit>
-		<Unit filename="teste/teste_servicos.cpp">
+		<Unit filename="src/testes/teste_servicos.cpp">
 			<Option target="Testes" />
 		</Unit>
 		<Extensions>
