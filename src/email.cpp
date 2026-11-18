@@ -46,6 +46,11 @@ void Email::validar(std::string valor) {
         throw std::invalid_argument("Erro: O dominio excede o limite de 255 caracteres.");
     }
 
+    // Um ponto no fim do dominio deixaria a ultima parte vazia
+    if (dominio.back() == '.') {
+        throw std::invalid_argument("Erro: Parte do dominio nao pode ser vazia.");
+    }
+
     // O domínio é composto por partes separadas por ponto[cite: 1]
     size_t posInicio = 0;
     size_t posPonto = dominio.find('.');
