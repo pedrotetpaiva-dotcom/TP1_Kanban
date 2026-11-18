@@ -29,8 +29,20 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Testes">
+				<Option output="bin/Testes/TP1_Testes" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Testes/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="testes" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
@@ -69,7 +81,10 @@
 		<Unit filename="include/tamanho.h" />
 		<Unit filename="include/texto.h" />
 		<Unit filename="include/timestamp.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/cartao_atividade.cpp" />
 		<Unit filename="src/container_cartao.cpp" />
 		<Unit filename="src/container_pessoa.cpp" />
@@ -100,6 +115,24 @@
 		<Unit filename="src/tamanho.cpp" />
 		<Unit filename="src/texto.cpp" />
 		<Unit filename="src/timestamp.cpp" />
+		<Unit filename="testes/main_testes.cpp">
+			<Option target="Testes" />
+		</Unit>
+		<Unit filename="testes/teste.h">
+			<Option target="Testes" />
+		</Unit>
+		<Unit filename="testes/teste_apresentacao.cpp">
+			<Option target="Testes" />
+		</Unit>
+		<Unit filename="testes/teste_dominios.cpp">
+			<Option target="Testes" />
+		</Unit>
+		<Unit filename="testes/teste_entidades.cpp">
+			<Option target="Testes" />
+		</Unit>
+		<Unit filename="testes/teste_servicos.cpp">
+			<Option target="Testes" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
