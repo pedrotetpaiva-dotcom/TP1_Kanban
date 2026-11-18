@@ -7,4 +7,4 @@ Pedro Henrique de Paiva Tete - 252024248
 
 PARA ABRIR O DOXYGEN DESCOMPRIMA O ARQUIVO ABRA O "index.html";
 
-Para rodar os testes de unidade vá, no Code::Blocks, em Build -> Select Target -> Testes -> Build & Run (F9);
+Para rodar os testes de unidade vá, no Code::Blocks, em Build -> Select Target -> Testes e depois Build & Run (F9);
